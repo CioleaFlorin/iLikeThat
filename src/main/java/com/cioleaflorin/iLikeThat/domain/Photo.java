@@ -27,6 +27,21 @@ public class Photo {
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
+    public void addComment(Comment comment) {
+        comments.add(comment);
+    }
+
+    public void removeComment(Comment comment) {
+        comments.remove(comment);
+    }
+
+    public void addLike(Likes like) {
+        likes.add(like);
+    }
+
+    public void removeLike(Likes like) {
+        likes.remove(like);
+    }
 
 
     public Long getId() {

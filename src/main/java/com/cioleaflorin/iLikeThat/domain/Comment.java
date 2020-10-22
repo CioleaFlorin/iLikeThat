@@ -16,7 +16,7 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "photo_id", nullable = false)
     private Photo photo;
-
+    
 
 
     public Long getId() {

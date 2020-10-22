@@ -21,8 +21,21 @@ public class Account {
 
 
     //using OneToOne with Shared Primary Key
-    @OneToOne(mappedBy = "accountx", cascade = CascadeType.ALL)
-    Login login;
+    //@OneToOne(mappedBy = "accountx", cascade = CascadeType.ALL)
+    //Login login;
+
+    public void addPhoto(Photo photo) {
+        //adding photo to account
+        photos.add(photo);
+
+    }
+
+    public void deletePhoto(Photo photo) {
+        photos.remove(photo);
+    }
+
+
+
 
     public Long getId() {
         return id;
@@ -56,11 +69,5 @@ public class Account {
         this.photos = photos;
     }
 
-    public Login getLogin() {
-        return login;
-    }
 
-    public void setLogin(Login login) {
-        this.login = login;
-    }
 }
